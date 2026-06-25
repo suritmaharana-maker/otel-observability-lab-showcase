@@ -17,7 +17,7 @@ Think of it as: **AppResponse + NetProfiler + an APM tool + an automated analyst
 
 ## The architecture, translated to on-prem terms
 
-<img src="./lab_architecture_with_llm_loop_v5.svg" width="900" />
+<img src="./lab_architecture_with_llm_loop_v5.svg" width="800" />
 
 Three microservices run on a managed Kubernetes (AWS EKS) cluster — a **gateway**, a **product service**, and a **PostgreSQL** database. The gateway sits on one node; the product service on another. That cross-node placement is deliberate, and it's the same instinct you have on-prem: **the interesting failures happen on the path *between* boxes**, not inside one.
 
@@ -102,7 +102,7 @@ For a real fault it returns — in ~3 seconds, for roughly five-thousandths of a
 
 **Honest maturity — where the automation stops.** AIOps has four layers; naming where you sit is the credibility:
 
-<img src="./figure_3_aiops_maturity.svg" width="600" />
+<img src="./figure_3_aiops_maturity.svg" width="800" />
 
 - **Signal collection** — ✓ done.
 - **Signal correlation** — ✓ but *pre-selected*: the queries are expert-defined, not auto-discovered.
